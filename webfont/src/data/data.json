@@ -1,0 +1,77 @@
+[
+  {
+ "id":1,
+ "name":"Jacket",
+ "brand":"yak Black",
+ "color":"Black",
+ "price":"1500",
+ "size":"sm"
+
+},
+{
+ "id":2,
+ "name":"Shirt",
+ "brand":"Being Human",
+ "color":"Black",
+ "price":"1500",
+ "size":"L"
+
+},
+{
+ "id":3,
+ "name":"Helmet",
+ "brand":"Bell",
+ "color":"Red",
+ "price":"3000",
+ "size":"Medium"
+
+
+},
+{
+ "id":4,
+ "name":"SAMSUNG",
+ "brand":"SAMSUNG",
+ "color":"Black",
+ "price":"50000",
+ "size":"2 inch"
+
+
+},
+{
+ "id":5,
+ "name":"Laptop",
+ "brand":"DELL",
+ "color":"Silver",
+ "price":"80000",
+ "size":"12 inch"
+
+
+},
+{
+ "id":6,
+ "name":"TV",
+ "brand":"Haier",
+ "color":"Black",
+ "price":"30000",
+ "size":"32 inch"
+
+},
+{
+ "id":7,
+ "name":"Washing machine",
+ "brand":"LG",
+ "color":"Black",
+ "price":"60000",
+ "size":"870 MM"
+
+},
+{
+ "id":8,
+ "name":"Shoes",
+ "brand":"Nike",
+ "color":"Black",
+ "price":"3000",
+ "size":"7"
+
+}
+]

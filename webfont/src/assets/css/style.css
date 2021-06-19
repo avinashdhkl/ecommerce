@@ -1,0 +1,45 @@
+/* css of product */
+
+.card{
+
+  width: 350px;
+
+
+}
+.card:hover img{
+  transform: scale(1.2,1.2);
+  -webkit-transform: scale(1.2,1.2);
+  -moz-transform: scale(1.2,1.2);
+  -ms-transform: scale(1.2,1.2);
+  -o-transform: scale(1.2,1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  opacity: 0.5;
+}
+.card img{
+  transform: scale(1,1);
+  -webkit-transform: scale(1,1);
+  -moz-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  -o-transform: scale(1,1);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+.card-wrapper-img{
+  height: 250px;
+  width: 300px;
+  overflow: hidden;
+}
+.card-body{
+  margin: 5px;
+}
+
+
+.brand{
+  font-family: cursive;
+}
+.price
+{
+  font-family: 'Courier New', Courier, monospace;
+  color: grey;
+}
