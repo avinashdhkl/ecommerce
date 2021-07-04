@@ -1,0 +1,11 @@
+.card-header >h4{
+  text-align: center;
+  color:gainsboro;
+}
+.row{
+  height: auto;
+
+}
+.card{
+  width: 40em;
+}

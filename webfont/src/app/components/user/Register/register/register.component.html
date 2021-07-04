@@ -1,0 +1,130 @@
+<div class="row ">
+  <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header bg-success ">
+       <h4 class="register"> Register</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup] ="registrationForm" (ngSubmit)="onSubmit()" >
+          <div class="form-group col-12" >
+            <label class="form-label fw-bold" for="firstname">First Name</label>
+            <input class="form-control" type="text" name="firstname" formControlName="firstname"  />
+            <span class="error-block" *ngIf="!firstname.valid && (firstname.touched || submitted)">
+              First Name is required
+            </span>
+          </div>
+          <!-- <div class="ui-state-error-text" *ngIf="firstname.invalid && firstname.touched ">
+            <p>eddwe</p>
+          </div> -->
+          <br/>
+          <div class="form-group col-12" >
+            <label class="form-label fw-bold" for="lastname">Last Name</label>
+            <input class="form-control" type="text" name="lastname" formControlName="lastname"/>
+            <span class="error-block" *ngIf="!lastname.valid && (lastname.touched || submitted)">
+              Last Name is required
+            </span>
+          </div><br/>
+          <div class="form-group col-12" >
+            <label class="form-label fw-bold" for="usernamename">User Name</label>
+            <input class="form-control" type="text" name="usernamename" formControlName="username"/>
+            <span class="error-block" *ngIf="!username.valid && (username.touched || submitted)">
+               UserName is required
+            </span>
+          </div><br/>
+          <div class="form-group col-12" >
+            <label class="form-label fw-bold" for="email">Email</label>
+            <input class="form-control" type="text" name="email" formControlName="email"/>
+            <span class="error-block" *ngIf="!email.valid && (email.touched || submitted)">
+              Email is required
+            </span>
+          </div><br/>
+          <div class="form-group col-12" >
+            <label class="form-label fw-bold" for="phonenumber">Phone Number</label>
+            <input class="form-control" type="number" name="phonenumber" formControlName="phonenumber" maxlength="10" />
+            <span *ngIf="!phonenumber.valid">
+              <span class="error-block" *ngIf="phonenumber.hasError('required') && (phonenumber.touched || submitted)" >
+                phone Number is required
+              </span>
+              <span class="error-block" *ngIf="phonenumber.hasError('maxlength')">
+                phone Number  must be 10 digits
+              </span>
+
+
+            </span>
+
+          </div><br/>
+          <div class=" form-group col-12"  >
+            <label>  Date of Birth</label>
+            <input type="text"
+                   placeholder="DD/MM/YY"
+                   class="form-control"
+                   bsDatepicker #dp="bsDatepicker" [bsConfig]="{dateInputFormat: 'DD/MM/YYYY',isAnimated:true}"
+
+                   name="dob" formControlName="dob">
+
+          </div>
+          <br/>
+          <div class="form-group col-12" >
+            <label class="form-label fw-bold" for="password">Password</label>
+            <input class="form-control" type="password" name="password" formControlName="password" minlength="6" required />
+            <span  *ngIf="password.invalid ">
+             <span class="error-block" *ngIf="password.hasError('required')&& (password.touched || submitted)">
+              password is required
+             </span>
+             <span class="error-block" *ngIf="password.hasError('minlength')">
+              password must be 6 character
+             </span>
+
+            </span>
+          </div><br/>
+          <div class="form-group col-12" >
+            <label class="form-label fw-bold" for="confirmpassword">Confirm password</label>
+            <input class="form-control" type="password" formControlName="confirmpassword" required/>
+            <span class="error-block" *ngIf="!confirmpassword.valid ">
+            <span class="error-block"  *ngIf="confirmpassword.hasError('required') && (confirmpassword.touched ||submitted ) ">
+              ConfirmPassword is required
+            </span><br/>
+            <span class="error-block" *ngIf="confirmpassword !== password   && confirmpassword.valid">
+              password does not match
+             </span>
+              <!-- <span class="error-block" *ngIf="confirmpassword.value !== password.value   && confirmpassword.valid">
+                password does not match
+               </span> -->
+            </span>
+          </div><br/>
+          <div class="form-group col-12" >
+             <label class="form-label fw-bold" for="gender">Gender</label><br/>
+
+            <div class="custom-control custom-radio custom-control-inline">
+
+            <input class="form-check-input"  type="Radio" value="male" formControlName="gender"/> Male
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input class="form-check-input"  type="Radio" value="female" formControlName="gender"/> Female
+            </div>
+          </div><br/>
+          <div class="form-group col-12" >
+
+            <input class="form-check-input" type="checkbox" name="agree"/> I agree
+
+          </div><br/>
+          <div class="form-group col-12" >
+            <div class="btn-group m-5">
+              <button class="btn btn-success " type="submit">Submit</button>
+              &nbsp;
+              <button class="btn btn-danger " type="reset">Reset</button>
+
+            </div>
+
+
+          </div>
+
+
+        </form>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>

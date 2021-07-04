@@ -1,0 +1,46 @@
+/* .card-body{
+  margin-top: 5em;
+} */
+.card{
+  width:30em;
+  margin-left: 22em;
+}
+.card-header h2{
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+}
+.form-group{
+  margin-top: 1em;
+}
+/* .btn-group .btn{
+  font-size: 0.7em;
+
+  font-weight: bold;
+
+} */
+.left-btn .btn {
+
+  border-top-left-radius: 25em;
+  border-bottom-left-radius: 25em;
+  padding: 5px;
+
+}
+.right-btn .btn{
+  border-top-right-radius: 25em;
+  border-bottom-right-radius: 25em;
+  padding: 5px;
+
+}
+.btn-group > .btn[ng-reflect-btn-radio]{
+  border: yellow dashed;
+  border-radius: 44em;
+  -webkit-border-radius: 44em;
+  -moz-border-radius: 44em;
+  -ms-border-radius: 44em;
+  -o-border-radius: 44em;
+  padding: 0 15px;
+  line-height: 30px !important;
+}
+

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { ProductService } from 'src/app/servies/product/product.service';
-import { IProduct } from './../interface/IProduct';
+import { IProduct } from '../../../interface/IProduct';
+import { productModel } from './../../models/product/productmodel';
 
 
 @Component({
@@ -10,16 +12,21 @@ import { IProduct } from './../interface/IProduct';
   styleUrls: ['./productlist.component.css']
 })
 export class ProductlistComponent implements OnInit {
+  type =1;
 
- products !: Array<IProduct> ;
+ products !: IProduct[] ;
 
-  constructor(private productservice : ProductService) { }
+  constructor(private productservice : ProductService,private route : ActivatedRoute) { }
 
   ngOnInit():void {
-    this.productservice.getAllProduct().subscribe(
+    if(this.route.snapshot.url.toString()){
+      this.type=2
+    }
+    this.productservice.getAllProduct(this.type).subscribe(
             data=>{
               this.products=data;
         console.log("data",data);
+        console.log('type:',this.route.snapshot.url.toString());
       },error=>{
         console.log(error);
       }

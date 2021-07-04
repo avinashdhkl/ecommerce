@@ -1,14 +1,49 @@
-<div class="sidenav bg-warning">
+<div class="sidenav bg-warning" *ngIf="userLogin()">
+  <ul class="navbar-nav ml-auto" >
+    <li class="nav-item active" *ngIf="userLogin()">
+      <!-- <a class="nav-link waves-light" mdbWavesEffect> <h5 class="loginUser"> {{LoggedInUser}} </h5> </a> -->
+    </li>
+    <li class="nav-item active" *ngIf="userLogin()">
+      <img src="./../../../assets/images/user/userdefaultimg.jpg" alt="Avatar" class="md-avatar rounded-circle">
+
+    </li>
+    </ul>
+
   <div class="sidebar-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+
+
+
+    <ul class="navbar-nav ml-auto">
+      <div class="dropdown" mdbDropdown>
+        <a mdbDropdownToggle    class="dropdown-toggle  bg-warning"
+          >
+          Product
+        </a>
+        <div class="dropdown-menu bg-warning ">
+          <a class="item" routerLink="add-product">Add Product</a>
+          <a class="item " routerLink="tables/product">Manage Product</a>
+
+        </div>
+      </div>
+
+        <li class="nav-item active " >
+          <a class="nav-link  " mdbWavesEffect> Contact</a>
+        </li>
+        <li class="nav-item active ">
+              <a class="nav-link  " mdbWavesEffect> Abouts</a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link " mdbWavesEffect> Logout</a>
+            </li>
+          </ul>
+
+
+
   </div>
 
 </div>
 
 <!-- Page content -->
-<div class="main">
+<div class="main"  >
   ...
 </div>

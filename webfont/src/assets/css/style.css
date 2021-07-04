@@ -2,7 +2,7 @@
 
 .card{
 
-  width: 350px;
+  width: auto;
 
 
 }
@@ -26,8 +26,8 @@
   transition-timing-function: ease-out;
 }
 .card-wrapper-img{
-  height: 250px;
-  width: 300px;
+  height: 300px;
+  width: 350px;
   overflow: hidden;
 }
 .card-body{
@@ -42,4 +42,25 @@
 {
   font-family: 'Courier New', Courier, monospace;
   color: grey;
+}
+.error-block{
+  color: red;
+  font-size: x-large;
+}
+.md-avatar{
+  height: 40px;
+  width: 45px;
+  /* border-radius: 50%; */
+
+}
+.tab-panel{
+  border: 1px solid #ddd ;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 1em;
+  max-height: 37.5em;
+  background-color: white;
 }

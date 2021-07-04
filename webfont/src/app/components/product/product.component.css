@@ -20,3 +20,10 @@
   font-family: 'Courier New', Courier, monospace;
   color: grey;
 } */
+.card-wrapper-img{
+  overflow: hidden;
+
+
+  padding: 2em;
+  position: relative;
+}

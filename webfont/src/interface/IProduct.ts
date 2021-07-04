@@ -1,6 +1,7 @@
 export interface IProduct {
-  id:number;
+  id:number| string;
   name:string;
+  type:number| string;
   color:string;
   brand:string;
   size:string;

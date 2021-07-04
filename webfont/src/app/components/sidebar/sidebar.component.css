@@ -1,0 +1,37 @@
+
+.dropdown-item{
+  width: 1px;
+  font-size: small;
+  font-weight: bold;
+}
+.dropdown-toggle{
+  font-size: 20px;
+  font-weight: bold;
+  color: antiquewhite;
+
+}
+.sidebar-content{
+  margin-top: 2em;
+ text-align: center;
+}
+.item{
+  font-size: medium;
+}
+.nav-item{
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 1em;
+  padding: 1em;
+}
+.nav-item a:hover{
+  color:white;
+}
+.md-avatar{
+  height: 80px;
+  width: 80px;
+  /* border-radius: 50%; */
+
+}
+.navbar-nav a{
+  text-align: center;
+}

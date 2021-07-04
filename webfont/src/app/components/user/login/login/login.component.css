@@ -1,0 +1,19 @@
+.row{
+  height: auto;
+
+}
+.card{
+  width: 20em;
+}
+
+.card-header >h4{
+  text-align: center;
+  color:gainsboro;
+}
+.form-label{
+  text-align: center !important;
+
+}
+.btn{
+  margin-left: 6em;
+}
