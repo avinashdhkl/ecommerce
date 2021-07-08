@@ -14,33 +14,10 @@
 .form-group{
   margin-top: 1em;
 }
-/* .btn-group .btn{
-  font-size: 0.7em;
-
-  font-weight: bold;
-
-} */
-.left-btn .btn {
-
-  border-top-left-radius: 25em;
-  border-bottom-left-radius: 25em;
-  padding: 5px;
-
-}
-.right-btn .btn{
-  border-top-right-radius: 25em;
-  border-bottom-right-radius: 25em;
-  padding: 5px;
-
-}
-.btn-group > .btn[ng-reflect-btn-radio]{
-  border: yellow dashed;
-  border-radius: 44em;
-  -webkit-border-radius: 44em;
-  -moz-border-radius: 44em;
-  -ms-border-radius: 44em;
-  -o-border-radius: 44em;
-  padding: 0 15px;
+.btn-group >button[ng-reflect-btn-radio]{
+  border: 1px red solid;
+  border-radius:44px !important;
+  padding: 0 15px !important;
   line-height: 30px !important;
 }
 

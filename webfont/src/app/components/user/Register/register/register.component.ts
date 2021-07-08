@@ -20,13 +20,13 @@ Router : any
 
   ngOnInit() {
 
-    // this.createRegistrationForm();
+    this.createRegistrationForm();
 
   }
   createRegistrationForm(){
     this.registrationForm = this.fb.group(
       {
-        firstname:[null ,Validators.required],
+        firstname:['' ,Validators.required],
         lastname:['',Validators.required],
         username :['',[Validators.required,]],
         email :['',[Validators.required,Validators.email]],
@@ -37,10 +37,10 @@ Router : any
         gender :[''],
         image:['']
       }
-      // ,{
-      //   Validators: this.passwordMatchinValidators
+      ,{
+        Validators: this.passwordMatchinValidators
 
-      // }
+      }
 
 
 

@@ -64,3 +64,10 @@
   max-height: 37.5em;
   background-color: white;
 }
+
+.btn-group >button[ng-reflect-btn-radio]{
+  border: 1px red solid;
+  border-radius:44px !important;
+  padding: 0 15px !important;
+  line-height: 30px !important;
+}

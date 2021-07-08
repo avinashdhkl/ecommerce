@@ -25,6 +25,10 @@ export class ProductlistComponent implements OnInit {
     this.productservice.getAllProduct(this.type).subscribe(
             data=>{
               this.products=data;
+              // let product = JSON.parse(localStorage.getItem('products')||'');
+              // if(product.type===this.type){
+              //   this.products=[product,...this.products]
+              // }
         console.log("data",data);
         console.log('type:',this.route.snapshot.url.toString());
       },error=>{

@@ -1,6 +1,6 @@
 import { IProduct } from '../../../interface/IProduct';
 export class productModel implements IProduct {
-  id!: number;
+  id!: number|string;
   name!: string;
   color!: string;
   brand!: string;
