@@ -1,0 +1,66 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark  bg-success cyan" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" routerLink="/">Navbar</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+
+    <ul class="navbar-nav ml-auto">
+    <!-- <li class="nav-item">
+          <a class="nav-link waves-light"   routerLinkActive="active"   routerLink="/clothes"> Clothes </a>
+      </li> -->
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link waves-light" mdbWavesEffect routerLinkActive="active"  routerLink="/gadgets">Gadgets</a>
+      </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> Contact</a>
+      </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+<li class="nav-item ">
+        <a class="nav-link waves-light" mdbWavesEffect> Abouts us</a>
+      </li>
+
+    </ul>
+
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item active" *ngIf="userLogin()">
+        <a class="nav-link waves-light" mdbWavesEffect> <h5 class="loginUser"> {{LoggedInUser}} </h5> </a>
+      </li>
+      <li class="nav-item active" *ngIf="userLogin()">
+        <img src="./../../../assets/images/user/userdefaultimg.jpg" alt="Avatar" class="md-avatar rounded-circle">
+
+      </li>
+
+
+
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown  *ngIf="userLogin()" >
+
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="cog"></mdb-icon> <span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+          <a class="dropdown-item waves-light" (click)="logout()" mdbWavesEffect href="#">Log out</a>
+        </div>
+      </li>
+      <li class="nav-item active" *ngIf="!userLogin()" >
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/login"><mdb-icon fas icon="sign-in-alt"></mdb-icon> Login</a>
+      </li>
+      <li class="nav-item"*ngIf="!userLogin()">
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/register"><mdb-icon fas icon="user-plus"></mdb-icon> Register</a>
+      </li>
+
+    </ul>
+
+    <!-- Links -->
+
+  <!-- Collapsible content -->
+
+</mdb-navbar>

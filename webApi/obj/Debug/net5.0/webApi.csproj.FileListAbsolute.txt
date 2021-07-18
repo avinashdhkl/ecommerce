@@ -55,5 +55,5 @@ D:\dotnet\Fullstack\ecommerce\webApi\bin\Debug\net5.0\runtimes\win-x64\native\Mi
 D:\dotnet\Fullstack\ecommerce\webApi\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\dotnet\Fullstack\ecommerce\webApi\bin\Debug\net5.0\AutoMapper.dll
 D:\dotnet\Fullstack\ecommerce\webApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-D:\dotnet\Fullstack\ecommerce\webApi\obj\Debug\net5.0\webApi.csproj.AssemblyReference.cache
 D:\dotnet\Fullstack\ecommerce\webApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\dotnet\Fullstack\ecommerce\webApi\obj\Debug\net5.0\webApi.csproj.AssemblyReference.cache

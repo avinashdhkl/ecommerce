@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {RouterModule,Routes} from '@angular/router';
-import {HttpClientModule} from '@angular/common/http'
+import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { UserService } from './servies/user/user.service';
 
 
@@ -39,71 +39,90 @@ import { AddproductComponent } from './components/addProduct/addproduct/addprodu
 import { ProductdetailsComponent } from './components/productdetails/productdetails/productdetails.component';
 import { AuthService } from './servies/user/auth/auth.service';
 import { ProductTableComponent } from './components/ProductTable/ProductTable.component';
+import { ProductdetailsresolverService } from './components/productdetails/resolver/productdetailsresolver.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { HttpErrorInterceptorService } from './servies/InterceptorErr/Httperr-interceptorService';
+import { EditComponentComponent } from './components/editComponent/editComponent.component';
 
 
 
 
-const appRoutes: Routes=[
-  {path:'' , component: ProductlistComponent},
-  {path:'user/login' , component:LoginComponent},
-  {path:'user/register', component:RegisterComponent},
-  {path:'add-product',component:AddproductComponent},
-  {path:'product-details', component:ProductdetailsComponent},
-  {path:'tables/product',component:ProductTableComponent},
-  {path:'clothes' , component: ProductlistComponent},
-  {path:'gadgets' , component: ProductlistComponent}
+const appRoutes: Routes = [
+    {path: "" , component: ProductlistComponent},
+    {path: "user/login" , component: LoginComponent},
+    {path: "user/register", component: RegisterComponent},
+    {path: "add-product", component: AddproductComponent},
+    {path: "product-details/:id", component: ProductdetailsComponent, resolve: {prp: ProductdetailsresolverService}},
+    {path: "tables/product", component: ProductTableComponent},
+    {path: "clothes" , component: ProductlistComponent},
+    {path: "gadgets" , component: ProductlistComponent},
+    {path:'edit-product/:id', component:EditComponentComponent,resolve: {prp: ProductdetailsresolverService}}
 //  {path:'/clothes', component:ProductdetailsComponent}
-]
+];
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductComponent,
-    ProductlistComponent,
-    NavbarComponent,
-    SidebarComponent,
-    RegisterComponent,
-    LoginComponent,
-    AddproductComponent,
-    ProductdetailsComponent,
-    ProductTableComponent
-  ],
-  imports: [
-
-  BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-    TooltipModule.forRoot(),
-    MDBBootstrapModule.forRoot(),
-    TabsModule.forRoot(),
-    TableModule,
-    WavesModule,
-    BrowserAnimationsModule,
-    BsDatepickerModule.forRoot(),
-    FormsModule,
-
-    ReactiveFormsModule,
+    declarations: [
+        AppComponent,
+        ProductComponent,
+        ProductlistComponent,
+        NavbarComponent,
+        SidebarComponent,
+        RegisterComponent,
+        LoginComponent,
+        AddproductComponent,
+        ProductdetailsComponent,
+        ProductTableComponent,
+        EditComponentComponent,
+        FilterPipe
+    ],
+    imports: [
 
 
 
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        RouterModule.forRoot(appRoutes),
+        TooltipModule.forRoot(),
+        MDBBootstrapModule.forRoot(),
+        TabsModule.forRoot(),
+        TableModule,
+        WavesModule,
+        BrowserAnimationsModule,
+        BsDatepickerModule.forRoot(),
+        FormsModule,
+        ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
+
+        ReactiveFormsModule,
 
 
-    // MatButtonModule,
-    // MatDividerModule,
-    // MatIconModule,
-    // MatButtonModule,
-    // MatSidenavModule,
-    // MatToolbarModule
 
 
-  ],
-  providers: [
-    ProductService,
-    UserService,
-    AuthService,
 
-  ],
-  bootstrap: [AppComponent],
+        // MatButtonModule,
+        // MatDividerModule,
+        // MatIconModule,
+        // MatButtonModule,
+        // MatSidenavModule,
+        // MatToolbarModule
+
+
+    ],
+    providers: [
+      {
+        provide:HTTP_INTERCEPTORS,
+        useClass:HttpErrorInterceptorService,
+        multi:true
+
+      },
+        ProductService,
+        UserService,
+        AuthService,
+        ProductdetailsresolverService,
+
+
+
+    ],
+    bootstrap: [AppComponent],
 
 })
 export class AppModule { }

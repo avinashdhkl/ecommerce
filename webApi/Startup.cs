@@ -33,7 +33,7 @@ namespace webApi
         public void ConfigureServices(IServiceCollection services)
         {
            
-          
+         
             services.AddControllers();
             services.AddCors();
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
@@ -56,6 +56,8 @@ namespace webApi
                     };
 
                 });
+            
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,8 +69,11 @@ namespace webApi
             }
 
             app.UseRouting();
+            
 
             app.UseAuthorization();
+            //app.UseCors(m => m.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
+            app.UseCors(m => m.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseEndpoints(endpoints =>
             {

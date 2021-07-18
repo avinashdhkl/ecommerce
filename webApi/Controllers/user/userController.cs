@@ -32,7 +32,12 @@ namespace webApi.Controllers.user
         }
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserRegisterdots regdots)
+
         {
+            if (string.IsNullOrEmpty(regdots.username.Trim()) || string.IsNullOrEmpty(regdots.password.Trim()))
+            {
+                return BadRequest("Username and password should not be Blank");
+            }
             if (await uow.UserResp.UserAlreadyExist(regdots.username))
 
                 return BadRequest("Already Exist");
@@ -57,7 +62,7 @@ namespace webApi.Controllers.user
             var user = await uow.UserResp.Authenticate(logindots.username, logindots.password);
             if (user == null)
             {
-                return Unauthorized();
+                return Unauthorized("Invalid username and password");
             }
             var LoginUserResp = new UserRes();
             LoginUserResp.username = user.username;

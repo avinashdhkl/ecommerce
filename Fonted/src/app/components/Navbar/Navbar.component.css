@@ -1,0 +1,18 @@
+.navbar .navbar-expand-lg .navbar-dark .bg-success{
+  width: 100% !important;
+  float: left;
+}
+/* img{
+  border-radius: 50%;
+
+} */
+.loginUser{
+  color: blanchedalmond;
+  text-transform: capitalize;
+  font-family:  Courier;
+font-weight: bold;
+}
+.loginUser:hover{
+  color:chartreuse
+}
+

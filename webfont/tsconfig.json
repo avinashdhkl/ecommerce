@@ -23,9 +23,17 @@
     "typeRoots": [
 
       "src/alertifytype.d.ts",
+      "../node_modules/@types",
+      "../@types"
 
     ]
   },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+},
+"include": [
+  "src"
+],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

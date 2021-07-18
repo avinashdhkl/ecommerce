@@ -18,6 +18,8 @@ namespace webApi.Data.unitofwork
         }
         public IUser UserResp => new UserResp(dc);
 
+        public Iproduct productRespo => new productRespo(dc);
+
         public async Task<bool> SaveAsync()
         {
             return await dc.SaveChangesAsync() > 0;

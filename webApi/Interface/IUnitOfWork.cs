@@ -8,6 +8,7 @@ namespace webApi.Interface
     public interface IUnitOfWork
     {
         IUser UserResp { get; }
+        Iproduct productRespo { get; }
             Task<bool> SaveAsync();
     }
 }

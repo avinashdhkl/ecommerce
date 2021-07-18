@@ -1,0 +1,154 @@
+<div  class="card">
+  <div class="card-header bg-success">
+   <h2>Edit Product </h2>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="tab-panel">
+        <tabset #formTabs>
+          <tab heading="Basic info" id="tab1" formGroupName="BasicInfo" >
+            <!-- <div class="form-group col-12" >
+              <h6>I Want To</h6>
+
+
+
+
+             <div class="custom-control custom-radio custom-control-inline" name='type'>
+
+             <input class="form-check-input" type="radio" value="1" id="type" name="type" formControlName="type" [(ngModel)]='product.type' [checked]="true"/> Clothes
+             </div>
+             <div class="custom-control custom-radio custom-control-inline">
+               <input class="form-check-input"  type="radio" value="2" id='type'  formControlName="type"[(ngModel)]='product.type'[checked]="true"/> Gadgets
+             </div>
+             <div class="error-block" *ngIf="type.invalid" >
+               <p>please choose</p>
+             </div>
+           </div> -->
+
+
+
+
+
+            <div class="form-group col-12" >
+              <label class="form-label fw-bold" for="name">Product Name</label>
+              <input class="form-control" id="name" type="text" name='name'   formControlName="name" [(ngModel)]='product.name'  />
+              <div class="error-block" *ngIf="!name.valid && (name.touched || nextClicked) " >
+                <p>Enter product name</p>
+              </div>
+            </div>
+            <div class="form-group col-12" >
+              <label class="form-label fw-bold" for="firstname">Brand</label>
+              <input class="form-control" id='brand' type="text"  formControlName="brand" [(ngModel)]='product.brand'  />
+              <div class="error-block" *ngIf="!brand.valid && (brand.touched || nextClicked) " >
+                <p>Enter product Brand</p>
+              </div>
+
+            </div>
+            <div class="form-group col-12" >
+             <button  class="btn btn-success btn-block" type="button"  (click)="selectTab(1, BasicInfo.valid)" >Next</button>
+            </div>
+
+          </tab>
+          <tab heading="Price" formGroupName="priceInfo" >
+            <div class="form-group col-12" >
+              <label class="form-label fw-bold" for="color">Color</label>
+              <input class="form-control" id='color' type="text"  formControlName="Color" formControlName="color" [(ngModel)]='product.color'  />
+              <div class="error-block" *ngIf="!color.valid && (color.touched || nextClicked) " >
+                <p>Enter product Color</p>
+              </div>
+            </div>
+            <div class="form-group col-12" >
+              <label class="form-label fw-bold" for="firstname">Size</label>
+              <input class="form-control" id='size' type="text" formControlName="size"   name="size" [(ngModel)]='product.size'/>
+              <div class="error-block" *ngIf="!size.valid && (size.touched || nextClicked) " >
+                <p>Enter product Size</p>
+              </div>
+            </div>
+            <div class="form-group col-12" >
+              <label class="form-label fw-bold" for="firstname">Price</label>
+              <input class="form-control" id='price' type="text" formControlName="price" name="price" [(ngModel)]='product.price'/>
+              <div class="error-block" *ngIf="!price.valid && (price.touched || nextClicked) " >
+                <p>Enter product Price</p>
+              </div>
+
+            </div>
+
+
+            <div class="form-group col-12" >
+              <button  class="btn btn-success btn-block" type="button"  (click)="selectTab(2,priceInfo.valid)">Next</button>
+             </div>
+             <div class="form-group col-12" >
+              <button  type="button"  class="btn btn-primary btn-block" (click)="selectTab(0,priceInfo.valid)">Back</button>
+             </div>
+          </tab>
+          <tab heading="Details" formGroupName="DetailsInfo">
+            <div class="form-group col-12" >
+              <label class="form-label fw-bold" for="firstname">PostBy</label>
+              <input class="form-control" id='postby' type="text" formControlName="postby" name="postby" [(ngModel)]='product.postby'/>
+              <div class="error-block" *ngIf="!postby.valid && (postby.touched || nextClicked) " >
+                <p>Enter posted By</p>
+              </div>
+
+            </div>
+            <!-- <div class="form-group col-12" >
+              <label class="form-label fw-bold" for="firstname">Post Date</label>
+              <input type="text"
+              placeholder="Datepicker"
+              id='postdate'
+              class="form-control"
+              name="postdate"
+              formControlName="postdate"
+              [(ngModel)]='product.postdate'
+              bsDatepicker
+
+              >
+              <div class="error-block" *ngIf="!postdate.valid && (postdate.touched || nextClicked) " >
+                <p>Enter product post Date</p>
+              </div>
+     </div>
+ -->
+
+     <div class="form-group col-12">
+      <label>Description</label>
+      <textarea type="text" id='description' class="form-control" rows="6" formControlName="description"[(ngModel)]='product.description'></textarea>
+      <div class="error-block" *ngIf="!description.valid && (description.touched || nextClicked) " >
+        <p>Enter product Description</p>
+      </div>
+    </div>
+    <!-- <div class="md-form">
+      <mdb-icon fas icon="pencil-alt" class="prefix"></mdb-icon>
+      <textarea type="text" id="form8" class="md-textarea form-control" formControlName="description" mdbInput></textarea>
+      <label for="form8">Icon Prefix</label>
+    </div> -->
+
+            <div class="form-group col-12" >
+              <button  class="btn btn-success btn-block"  (click)="selectTab(3,DetailsInfo.valid)">Next</button>
+             </div>
+             <div class="form-group col-12" >
+              <button  class="btn btn-primary btn-block"(click)="selectTab(1,DetailsInfo.valid)">Back</button>
+             </div>
+
+          </tab>
+          <tab heading="Photos" formGroupName="uploadInfo">
+            Working on upload images
+            <div class="form-group col-12" >
+              <button type="submit" class="btn btn-success btn-block">Save</button>
+             </div>
+             <div class="form-group col-12" >
+              <button type="reset" class="btn btn-danger btn-block">Cancel</button>
+             </div>
+             <div class="form-group col-12" >
+              <button  class="btn btn-primary btn-block"(click)="selectTab(2,uploadInfo.valid)">Back</button>
+             </div>
+          </tab>
+          <!-- <tab heading="Basic Title 2">Basic content 2</tab>
+          <tab heading="Basic Title 1">Basic content 1</tab>
+          <tab heading="Basic Title 2">Basic content 2</tab> -->
+        </tabset>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<!-- [bsConfig]="{dateInputFormat: 'DD/MM/YYYY'}" -->

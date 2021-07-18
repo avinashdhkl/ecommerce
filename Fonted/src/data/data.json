@@ -1,0 +1,95 @@
+[
+  {
+ "id":1,
+ "name":"Jacket",
+ "type":1,
+ "brand":"yak Black",
+ "color":"Black",
+ "price":"1500",
+ "size":"sm",
+ "image":"blackyak.png"
+
+},
+{
+ "id":2,
+ "type":1,
+ "name":"Shirt",
+ "brand":"Being Human",
+ "color":"Black",
+ "price":"1500",
+ "size":"L",
+ "image":"beinghuman.jpg"
+
+},
+{
+ "id":3,
+ "type":2,
+ "name":"Helmet",
+ "brand":"Bell",
+ "color":"Red",
+ "price":"3000",
+ "size":"Medium",
+ "image":"bell.jpg"
+
+
+},
+{
+ "id":4,
+ "type":2,
+ "name":"SAMSUNG",
+ "brand":"SAMSUNG",
+ "color":"Black",
+ "price":"50000",
+ "size":"2 inch",
+ "image":"samsung.jpeg"
+
+
+
+},
+{
+ "id":5,
+ "type":2,
+ "name":"Laptop",
+ "brand":"DELL",
+ "color":"Silver",
+ "price":"80000",
+ "size":"12 inch",
+ "image":"dell.png"
+
+
+
+},
+{
+ "id":6,
+ "type":2,
+ "name":"TV",
+ "brand":"Haier",
+ "color":"Black",
+ "price":"30000",
+ "size":"32 inch",
+ "image":"haier.jpg"
+
+},
+{
+ "id":7,
+ "type":2,
+ "name":"Washing machine",
+ "brand":"LG",
+ "color":"Black",
+ "price":"60000",
+ "size":"870 MM",
+ "image":"lg.jpg"
+
+},
+{
+ "id":8,
+ "type":1,
+ "name":"Shoes",
+ "brand":"Nike",
+ "color":"Black",
+ "price":"3000",
+ "size":"7",
+ "image":"nike.jpg"
+
+}
+]
